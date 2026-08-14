@@ -1,0 +1,492 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 80px 24px;
+  height: 3000px;
+  box-sizing: border-box;
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  height: 50px;
+  margin-top: 50px;
+  width: 70%;
+  max-width: 900px;
+  border-radius: 14px;
+  padding: 0px 20px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.home-icon,
+.about-icon,
+.why-me-icon,
+.project-icon,
+.review-icon,
+.reach-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  display: block;
+  background: transparent;
+  object-fit: contain;
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.home-icon:hover,
+.about-icon:hover,
+.why-me-icon:hover,
+.project-icon:hover,
+.review-icon:hover,
+.reach-icon:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+  transform: scale(1.08);
+}
+
+.nav-link {
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-left: -1px;
+  margin-right: 10px;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  transition: transform 0.3s ease;
+}
+
+.nav-link .tooltip {
+  font-family: Roboto, Arial, sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  font-size: 8px;
+  width: 35px;
+  text-align: center;
+  bottom: -22px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.nav-link:hover .tooltip {
+  opacity: 1;
+}
+
+.nav-link:hover {
+  transform: scale(1.5);
+}
+
+.profile {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 100px;
+  color: white;
+}
+
+#home {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  width: 50%;
+  margin-left: 100px;
+  padding-bottom: 100px;
+}
+
+.hi {
+  margin-bottom: 0px;
+  font-size: 70px;
+}
+
+/* Styling for the highlighted spans */
+.name-span,
+.about-span,
+.why-me-span,
+.reach-span,
+.review-span {
+  color: gold;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+.build {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: grey;
+}
+
+.creative {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: gold;
+}
+
+.cv {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.view-work,.let-talk, .Email, .LinkedIn, .GitHub {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  color: white;
+  border: 1px solid gold;
+  border-radius: 12px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.view-work:hover,.let-talk:hover, .Email:hover, .LinkedIn:hover, .GitHub:hover {
+  background: gold;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 215, 0, 0.25);
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.profile-pic {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px dotted white;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  margin-left: 100px;
+  margin-right: 100px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-top: 0px;
+}
+
+.about-left {
+  width: 48%;
+}
+
+/*general headlines style*/
+.headline {
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+
+.content-box {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 0 0 0.1px rgba(255, 215, 0, 0.18);
+}
+
+/* Styling for the content paragraphs */
+.content {
+  font-weight: normal;
+  font-family: aerial;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: auto;
+  padding: 10px 20px;
+
+}
+
+.about-right {
+  width: 48%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tools {
+  width: 100%;
+  max-width: 300px;
+  font-family: aerial;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.tool-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  width: 100%;
+  min-width: 380px;
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.tool-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.18);
+}
+
+.tool-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+.stats {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 420px;
+  gap: 18px;
+  margin-top: 20px;
+  font-family: aerial;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stats-span {
+  display: block;
+  color: gold;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#why-me {
+  margin-left: 100px;
+  margin-right: 300px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.why-me-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  margin-top: 0px;
+  row-gap: 20px;
+  column-gap: 50px;
+  margin-top: 0;
+}
+
+.why-me-box {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  width: 100%;
+  min-height: 150px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.03);
+  /* Very faint translucent white */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  /* Safari support */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Soft depth shadow */
+  transition: all 0.3s ease;
+}
+
+.box-number {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: gold;
+  margin: 0;
+  padding: 8px 0 0;
+}
+
+.why-me-headlines {
+  font-weight: normal;
+  font-family: aerial;
+  font-size: 20px;
+  margin: 0;
+  width: auto;
+  padding: 8px 0 0;
+}
+
+.why-me-paragraphs {
+  font-weight: normal;
+  font-family: aerial;
+  font-size: 15px;
+  margin: 0;
+  width: auto;
+  padding: 8px 0 0;
+  color: grey;
+  line-height: 1.4;
+}
+
+#review {
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.review-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.review-box {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  align-items: center;
+  width: 300px;
+  min-height: 150px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.03);
+  /* Very faint translucent white */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  /* Safari support */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Soft depth shadow */
+}
+
+.review-comment {
+  font-weight: normal;
+  font-family: aerial;
+  font-size: 15px;
+  font-style: italic;
+  margin: 0;
+  width: auto;
+  padding: 0;
+  color: grey;
+}
+
+.reviewer {
+  font-weight: normal;
+  font-family: aerial;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: auto;
+  padding: 0;
+}
+
+.reviewer-title {
+  font-weight: normal;
+  font-family: aerial;
+  font-size: 16px;
+  margin: 0;
+  width: auto;
+  padding: 0;
+  color: grey;
+}
+
+#reach {
+  margin-left: 100px;
+  margin-right: 100px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 500px;
+}
